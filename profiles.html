@@ -15,8 +15,8 @@
   <div id="members" class="members">Loading…</div>
 
   <div id="overlay" class="overlay" hidden>
+    <button id="close" class="close" aria-label="Close">×</button>
     <div class="modal" role="dialog" aria-modal="true">
-      <button id="close" class="close" aria-label="Close">×</button>
       <img id="m-img" class="m-img" alt="">
       <h2 id="m-name" class="m-name"></h2>
       <div id="m-stats" class="m-stats"></div>
@@ -45,7 +45,7 @@
         row.className = "stat" + (key === "points" ? " total" : "");
 
         const l = document.createElement("span");
-        l.textContent = icon + " " + label;
+        l.textContent = icon + " " + label + ":";
 
         const v = document.createElement("span");
         v.className = "value";
@@ -55,14 +55,15 @@
         box.append(row);
       }
       overlay.hidden = false;
+      document.body.style.overflow = "hidden";
     }
 
     function closeProfile() {
       overlay.hidden = true;
+      document.body.style.overflow = "";
     }
 
     document.getElementById("close").onclick = closeProfile;
-    overlay.onclick = (e) => { if (e.target === overlay) closeProfile(); };
     document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeProfile(); });
 
     fetch("members.json?t=" + Date.now())
@@ -96,7 +97,7 @@
       })
       .catch(() => {
         document.getElementById("members").textContent =
-          "Couldn't load members yet. Try again in a few minutes.";
+          "Couldn’t load members yet. Try again in a few minutes.";
       });
   </script>
 </body>
