@@ -79,7 +79,7 @@ nav {
   font-weight: 600;
 }
 
-/* ---------- profiles list ---------- */
+/* ---------- member list (profiles + leaderboard) ---------- */
 .members {
   max-width: 700px;
   margin: 0 auto;
@@ -118,15 +118,16 @@ nav {
   overflow-wrap: anywhere;
 }
 
-/* ---------- stats popup ---------- */
+/* ---------- full screen stats page ---------- */
 .overlay {
   position: fixed;
   inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
-  background: rgba(0, 0, 0, 0.6);
+  padding: 4rem 1.5rem 2rem;
+  background: #00558c;
+  overflow-y: auto;
   z-index: 10;
 }
 
@@ -135,9 +136,92 @@ nav {
 }
 
 .modal {
-  position: relative;
   width: 100%;
-  max-width: 420px;
-  padding: 2rem 1.5rem 1.5rem;
-  background: #0062a8;
-  border:
+  max-width: 520px;
+  margin: auto;
+  text-align: center;
+}
+
+.close {
+  position: fixed;
+  top: 0.75rem;
+  right: 1.25rem;
+  padding: 0 0.5rem;
+  background: none;
+  border: none;
+  color: #111111;
+  font-family: inherit;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 11;
+}
+
+.close:hover {
+  opacity: 0.6;
+}
+
+.m-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #999999;
+}
+
+.m-name {
+  margin: 1rem 0 2rem;
+  font-size: clamp(1.8rem, 6vw, 2.6rem);
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+
+.m-stats {
+  text-align: left;
+}
+
+.stat {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0.9rem 0.25rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.35);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.stat .value {
+  font-weight: 700;
+}
+
+.stat.total {
+  font-size: 1.5rem;
+}
+
+/* ---------- leaderboard rows ---------- */
+.lb-row {
+  cursor: default;
+}
+
+.lb-row:hover {
+  background: none;
+}
+
+.lb-row .place {
+  width: 2.5rem;
+  flex-shrink: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.lb-row .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.lb-row .sub {
+  font-size: 1rem;
+  font-weight: 600;
+}
