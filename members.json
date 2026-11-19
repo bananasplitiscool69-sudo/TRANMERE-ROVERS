@@ -1,90 +1,200 @@
 [
   {
     "name": "21",
-    "avatar": "https://cdn.discordapp.com/avatars/1134890754607693934/3183a236edaf8de0b6e4d415a987f270.png?size=128"
+    "avatar": "https://cdn.discordapp.com/avatars/1134890754607693934/3183a236edaf8de0b6e4d415a987f270.png?size=128",
+    "points": 5,
+    "goals": 1,
+    "assists": 0,
+    "def_cs": 0,
+    "gk_cs": 0
   },
   {
     "name": "Alex",
-    "avatar": "https://cdn.discordapp.com/avatars/695188781489324114/7a26158522b10ff60e64bb93e95a7d2b.png?size=128"
+    "avatar": "https://cdn.discordapp.com/avatars/695188781489324114/7a26158522b10ff60e64bb93e95a7d2b.png?size=128",
+    "points": 0,
+    "goals": 0,
+    "assists": 0,
+    "def_cs": 0,
+    "gk_cs": 0
   },
   {
     "name": "aron.UTD",
-    "avatar": "https://cdn.discordapp.com/avatars/1290727686024466616/29c25f80868bb72f2a11ce0a945e5153.png?size=128"
+    "avatar": "https://cdn.discordapp.com/avatars/1290727686024466616/29c25f80868bb72f2a11ce0a945e5153.png?size=128",
+    "points": 4,
+    "goals": 0,
+    "assists": 0,
+    "def_cs": 0,
+    "gk_cs": 1
   },
   {
     "name": "blicked.",
-    "avatar": "https://cdn.discordapp.com/avatars/1465932402466750588/ccf4deef496eff210eeae9964adc2af8.png?size=128"
+    "avatar": "https://cdn.discordapp.com/avatars/1465932402466750588/ccf4deef496eff210eeae9964adc2af8.png?size=128",
+    "points": 0,
+    "goals": 0,
+    "assists": 0,
+    "def_cs": 0,
+    "gk_cs": 0
   },
   {
     "name": "Bosh.",
-    "avatar": "https://cdn.discordapp.com/avatars/1451248794334138411/c900136f91ff368c60060c7f9c7600a9.png?size=128"
+    "avatar": "https://cdn.discordapp.com/avatars/1451248794334138411/c900136f91ff368c60060c7f9c7600a9.png?size=128",
+    "points": 0,
+    "goals": 0,
+    "assists": 0,
+    "def_cs": 0,
+    "gk_cs": 0
   },
   {
     "name": "Dalglish",
-    "avatar": "https://cdn.discordapp.com/avatars/1490685423226454138/d73ce9731257a70de775d7373af1d7dc.png?size=128"
+    "avatar": "https://cdn.discordapp.com/avatars/1490685423226454138/d73ce9731257a70de775d7373af1d7dc.png?size=128",
+    "points": 0,
+    "goals": 0,
+    "assists": 0,
+    "def_cs": 0,
+    "gk_cs": 0
   },
   {
     "name": "GVBBY.",
-    "avatar": "https://cdn.discordapp.com/avatars/1145444842952982528/b267a25edb87060a1d2d8bd1f4cce901.png?size=128"
+    "avatar": "https://cdn.discordapp.com/avatars/1145444842952982528/b267a25edb87060a1d2d8bd1f4cce901.png?size=128",
+    "points": 0,
+    "goals": 0,
+    "assists": 0,
+    "def_cs": 0,
+    "gk_cs": 0
   },
   {
     "name": "jwck",
-    "avatar": "https://cdn.discordapp.com/avatars/1409154860963856468/67173c5467e8388a8e0c423b899500de.png?size=128"
+    "avatar": "https://cdn.discordapp.com/avatars/1409154860963856468/67173c5467e8388a8e0c423b899500de.png?size=128",
+    "points": 0,
+    "goals": 0,
+    "assists": 0,
+    "def_cs": 0,
+    "gk_cs": 0
   },
   {
     "name": "Kaleb.",
-    "avatar": "https://cdn.discordapp.com/avatars/1549752092250349578/1dd6e6c7cab6adab7adba97defb16908.png?size=128"
+    "avatar": "https://cdn.discordapp.com/avatars/1549752092250349578/1dd6e6c7cab6adab7adba97defb16908.png?size=128",
+    "points": 0,
+    "goals": 0,
+    "assists": 0,
+    "def_cs": 0,
+    "gk_cs": 0
   },
   {
     "name": "LA MIZSHY",
-    "avatar": "https://cdn.discordapp.com/avatars/1526299799622647920/f30f717b89c7cbc2e5836acce42f87c2.png?size=128"
+    "avatar": "https://cdn.discordapp.com/avatars/1526299799622647920/f30f717b89c7cbc2e5836acce42f87c2.png?size=128",
+    "points": 4,
+    "goals": 0,
+    "assists": 0,
+    "def_cs": 1,
+    "gk_cs": 0
   },
   {
     "name": "lux_",
-    "avatar": "https://cdn.discordapp.com/avatars/1552944623549157440/1ec0a20f6434fe2c74df64d39d0a0857.png?size=128"
+    "avatar": "https://cdn.discordapp.com/avatars/1552944623549157440/1ec0a20f6434fe2c74df64d39d0a0857.png?size=128",
+    "points": 0,
+    "goals": 0,
+    "assists": 0,
+    "def_cs": 0,
+    "gk_cs": 0
   },
   {
     "name": "Morgzz",
-    "avatar": "https://cdn.discordapp.com/avatars/1502683417903501417/c529a0f94cad2e9ee2ca6c45d0bb64bd.png?size=128"
+    "avatar": "https://cdn.discordapp.com/avatars/1502683417903501417/c529a0f94cad2e9ee2ca6c45d0bb64bd.png?size=128",
+    "points": 0,
+    "goals": 0,
+    "assists": 0,
+    "def_cs": 0,
+    "gk_cs": 0
   },
   {
     "name": "Mrswe115",
-    "avatar": "https://cdn.discordapp.com/avatars/1541831406311702548/38f324c1d9ca82801c5910ca44bb3101.png?size=128"
+    "avatar": "https://cdn.discordapp.com/avatars/1541831406311702548/38f324c1d9ca82801c5910ca44bb3101.png?size=128",
+    "points": 0,
+    "goals": 0,
+    "assists": 0,
+    "def_cs": 0,
+    "gk_cs": 0
   },
   {
     "name": "Pax",
-    "avatar": "https://cdn.discordapp.com/avatars/871803930944880710/5895629eb457ca67c494d4a19440603f.png?size=128"
+    "avatar": "https://cdn.discordapp.com/avatars/871803930944880710/5895629eb457ca67c494d4a19440603f.png?size=128",
+    "points": 0,
+    "goals": 0,
+    "assists": 0,
+    "def_cs": 0,
+    "gk_cs": 0
   },
   {
     "name": "Rigglet🐷",
-    "avatar": "https://cdn.discordapp.com/avatars/1176431186042687511/1d4df53f5042be4cbd552878ddac29c4.png?size=128"
+    "avatar": "https://cdn.discordapp.com/avatars/1176431186042687511/1d4df53f5042be4cbd552878ddac29c4.png?size=128",
+    "points": 0,
+    "goals": 0,
+    "assists": 0,
+    "def_cs": 0,
+    "gk_cs": 0
   },
   {
     "name": "RIOOOO",
-    "avatar": "https://cdn.discordapp.com/avatars/1210885072153219093/93041586b3b80faffa67b70687ac1087.png?size=128"
+    "avatar": "https://cdn.discordapp.com/avatars/1210885072153219093/93041586b3b80faffa67b70687ac1087.png?size=128",
+    "points": 0,
+    "goals": 0,
+    "assists": 0,
+    "def_cs": 0,
+    "gk_cs": 0
   },
   {
     "name": "SpiderToes0917",
-    "avatar": "https://cdn.discordapp.com/avatars/1421973487458717788/9eba2c859f7bddcc6d2d9c281f3ab0a4.png?size=128"
+    "avatar": "https://cdn.discordapp.com/avatars/1421973487458717788/9eba2c859f7bddcc6d2d9c281f3ab0a4.png?size=128",
+    "points": 0,
+    "goals": 0,
+    "assists": 0,
+    "def_cs": 0,
+    "gk_cs": 0
   },
   {
     "name": "StanTheNoob",
-    "avatar": "https://cdn.discordapp.com/avatars/837611667235667979/27926e2bc959f3e598c1e302512b204c.png?size=128"
+    "avatar": "https://cdn.discordapp.com/avatars/837611667235667979/27926e2bc959f3e598c1e302512b204c.png?size=128",
+    "points": 4,
+    "goals": 0,
+    "assists": 0,
+    "def_cs": 1,
+    "gk_cs": 0
   },
   {
     "name": "will",
-    "avatar": "https://cdn.discordapp.com/avatars/1395511136157175928/1c1a08991cb0938eed90302927454b3b.png?size=128"
+    "avatar": "https://cdn.discordapp.com/avatars/1395511136157175928/1c1a08991cb0938eed90302927454b3b.png?size=128",
+    "points": 0,
+    "goals": 0,
+    "assists": 0,
+    "def_cs": 0,
+    "gk_cs": 0
   },
   {
     "name": "YS.",
-    "avatar": "https://cdn.discordapp.com/avatars/1522680105434878110/03cbf593db20e61c6452f83fa09a11a0.png?size=128"
+    "avatar": "https://cdn.discordapp.com/avatars/1522680105434878110/03cbf593db20e61c6452f83fa09a11a0.png?size=128",
+    "points": 0,
+    "goals": 0,
+    "assists": 0,
+    "def_cs": 0,
+    "gk_cs": 0
   },
   {
     "name": "zJamr",
-    "avatar": "https://cdn.discordapp.com/avatars/1200103307662864434/592abcea81ef31f7a35374798c7bdc3f.png?size=128"
+    "avatar": "https://cdn.discordapp.com/avatars/1200103307662864434/592abcea81ef31f7a35374798c7bdc3f.png?size=128",
+    "points": 0,
+    "goals": 0,
+    "assists": 0,
+    "def_cs": 0,
+    "gk_cs": 0
   },
   {
     "name": "𝙔𝙕.",
-    "avatar": "https://cdn.discordapp.com/avatars/1490158127251718245/8dc0b99ca5589e934d41bf8de49bfbf8.png?size=128"
+    "avatar": "https://cdn.discordapp.com/avatars/1490158127251718245/8dc0b99ca5589e934d41bf8de49bfbf8.png?size=128",
+    "points": 0,
+    "goals": 0,
+    "assists": 0,
+    "def_cs": 0,
+    "gk_cs": 0
   }
 ]
