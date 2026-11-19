@@ -12,10 +12,39 @@
   <h1>PROFILES</h1>
   <a class="back" href="index.html">← BACK</a>
 
-  <section class="card">
-    <p>Player profiles coming soon.</p>
-  </section>
+  <div id="members" class="members">Loading…</div>
 
-  <script src="script.js"></script>
+  <script>
+    fetch("members.json?t=" + Date.now())
+      .then(r => r.json())
+      .then(list => {
+        const box = document.getElementById("members");
+        box.textContent = "";
+        if (!list.length) {
+          box.textContent = "No members yet.";
+          return;
+        }
+        for (const p of list) {
+          const row = document.createElement("div");
+          row.className = "member";
+
+          const img = document.createElement("img");
+          img.src = p.avatar;
+          img.alt = "";
+          img.loading = "lazy";
+
+          const name = document.createElement("span");
+          name.className = "name";
+          name.textContent = p.name;
+
+          row.append(img, name);
+          box.append(row);
+        }
+      })
+      .catch(() => {
+        document.getElementById("members").textContent =
+          "Couldn't load members yet. Try again in a few minutes.";
+      });
+  </script>
 </body>
 </html>
