@@ -19,6 +19,7 @@ h1 {
   letter-spacing: 1px;
 }
 
+/* ---------- home page buttons ---------- */
 nav {
   display: flex;
   justify-content: space-around;
@@ -49,70 +50,61 @@ nav {
   background: #0a74c4;
   transform: translateY(-3px);
 }
-.members {
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: left;
-}
 
-.member {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 1rem 1.5rem;
-}
-
-.member img {
-  width: 110px;
-  height: 110px;
-  flex-shrink: 0;
-  border-radius: 50%;
-  object-fit: cover;
-  background: #999999;
-}
-
-.member .name {
-  font-size: 1.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  overflow-wrap: anywhere;
-}
-.members {
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.member {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 1rem 1.5rem;
-}
-
-.member img {
-  width: 110px;
-  height: 110px;
-  flex-shrink: 0;
-  border-radius: 50%;
-  object-fit: cover;
-  background: #999999;
-}
-
-.member .name {
-  font-size: 1.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  overflow-wrap: anywhere;
-}
+/* ---------- back link ---------- */
 .back {
   display: inline-block;
-  margin-bottom: 1.5rem;
+  margin: -1.5rem 0 2rem;
   color: #111111;
   font-weight: 700;
   text-decoration: none;
 }
 
+.back:visited {
+  color: #111111;
+}
+
 .back:hover {
   text-decoration: underline;
+}
+
+/* ---------- plain info card (results / upcoming pages) ---------- */
+.card {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background: #0062a8;
+  border: 2px solid #000000;
+  border-radius: 28px;
+  font-weight: 600;
+}
+
+/* ---------- profiles list ---------- */
+.members {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.member {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 1.5rem;
+}
+
+.member img {
+  width: 110px;
+  height: 110px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #999999;
+}
+
+.member .name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
 }
