@@ -1,6 +1,98 @@
-.member {
-  cursor: pointer;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background: #00558c;
+  color: #111111;
+  font-family: "Poppins", system-ui, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 2.5rem;
+  font-size: clamp(2rem, 8vw, 5rem);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* ---------- home page buttons ---------- */
+nav {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 110px;
+  padding: 0.5rem 1rem;
+  background: #0062a8;
+  color: #111111;
+  border: 2px solid #000000;
   border-radius: 28px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.15s, background 0.15s;
+}
+
+.btn:hover {
+  background: #0a74c4;
+  transform: translateY(-3px);
+}
+
+/* ---------- back link ---------- */
+.back {
+  display: inline-block;
+  margin: -1.5rem 0 2rem;
+  color: #111111;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.back:visited {
+  color: #111111;
+}
+
+.back:hover {
+  text-decoration: underline;
+}
+
+/* ---------- info card (results / upcoming pages) ---------- */
+.card {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background: #0062a8;
+  border: 2px solid #000000;
+  border-radius: 28px;
+  font-weight: 600;
+}
+
+/* ---------- profiles list ---------- */
+.members {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.member {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: 28px;
+  cursor: pointer;
   transition: background 0.15s;
 }
 
@@ -10,6 +102,23 @@
   outline: none;
 }
 
+.member img {
+  width: 110px;
+  height: 110px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #999999;
+}
+
+.member .name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- stats popup ---------- */
 .overlay {
   position: fixed;
   inset: 0;
@@ -31,55 +140,4 @@
   max-width: 420px;
   padding: 2rem 1.5rem 1.5rem;
   background: #0062a8;
-  border: 2px solid #000000;
-  border-radius: 28px;
-  text-align: center;
-}
-
-.close {
-  position: absolute;
-  top: 0.5rem;
-  right: 1rem;
-  background: none;
-  border: none;
-  color: #111111;
-  font-size: 2rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.m-img {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  object-fit: cover;
-  background: #999999;
-}
-
-.m-name {
-  margin: 0.75rem 0 1.25rem;
-  font-size: 1.6rem;
-  text-transform: uppercase;
-  overflow-wrap: anywhere;
-}
-
-.m-stats {
-  text-align: left;
-}
-
-.stat {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.6rem 0.25rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.35);
-  font-weight: 600;
-}
-
-.stat .value {
-  font-weight: 700;
-}
-
-.stat.total {
-  font-size: 1.15rem;
-}
+  border:
