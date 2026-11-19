@@ -1,1 +1,1 @@
-
+document.getElementById("status").textContent = "Site is working!";
