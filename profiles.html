@@ -14,7 +14,57 @@
 
   <div id="members" class="members">Loading…</div>
 
+  <div id="overlay" class="overlay" hidden>
+    <div class="modal" role="dialog" aria-modal="true">
+      <button id="close" class="close" aria-label="Close">×</button>
+      <img id="m-img" class="m-img" alt="">
+      <h2 id="m-name" class="m-name"></h2>
+      <div id="m-stats" class="m-stats"></div>
+    </div>
+  </div>
+
   <script>
+    const STAT_ROWS = [
+      ["⚽", "Goals", "goals"],
+      ["🅰️", "Assists", "assists"],
+      ["🧱", "Clean Sheets (DEF)", "def_cs"],
+      ["🧤", "Clean Sheets (GK)", "gk_cs"],
+      ["🏅", "Total Points", "points"],
+    ];
+
+    const overlay = document.getElementById("overlay");
+
+    function openProfile(p) {
+      document.getElementById("m-img").src = p.avatar;
+      document.getElementById("m-name").textContent = p.name;
+
+      const box = document.getElementById("m-stats");
+      box.textContent = "";
+      for (const [icon, label, key] of STAT_ROWS) {
+        const row = document.createElement("div");
+        row.className = "stat" + (key === "points" ? " total" : "");
+
+        const l = document.createElement("span");
+        l.textContent = icon + " " + label;
+
+        const v = document.createElement("span");
+        v.className = "value";
+        v.textContent = p[key] ?? 0;
+
+        row.append(l, v);
+        box.append(row);
+      }
+      overlay.hidden = false;
+    }
+
+    function closeProfile() {
+      overlay.hidden = true;
+    }
+
+    document.getElementById("close").onclick = closeProfile;
+    overlay.onclick = (e) => { if (e.target === overlay) closeProfile(); };
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeProfile(); });
+
     fetch("members.json?t=" + Date.now())
       .then(r => r.json())
       .then(list => {
@@ -27,6 +77,9 @@
         for (const p of list) {
           const row = document.createElement("div");
           row.className = "member";
+          row.tabIndex = 0;
+          row.onclick = () => openProfile(p);
+          row.onkeydown = (e) => { if (e.key === "Enter") openProfile(p); };
 
           const img = document.createElement("img");
           img.src = p.avatar;
