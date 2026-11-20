@@ -1,0 +1,72 @@
+[
+  {
+    "id": "1573069642476429536",
+    "date": "2026-11-19T20:17:08.987000+00:00",
+    "home": "TRANMERE",
+    "home_score": 4,
+    "away_score": 0,
+    "away": "OTHER TEAM",
+    "players": [
+      {
+        "name": "@21",
+        "icons": [
+          "⚽"
+        ]
+      },
+      {
+        "name": "@StanTheNoob",
+        "icons": [
+          "🧱"
+        ]
+      },
+      {
+        "name": "@LA MIZSHY",
+        "icons": [
+          "🧱"
+        ]
+      },
+      {
+        "name": "@aron.UTD",
+        "icons": [
+          "🧤"
+        ]
+      }
+    ],
+    "other_ga": "N/A"
+  },
+  {
+    "id": "1573069252242710700",
+    "date": "2026-11-19T20:15:35.948000+00:00",
+    "home": "TRANMERE",
+    "home_score": 4,
+    "away_score": 0,
+    "away": "OTHER 0",
+    "players": [
+      {
+        "name": "@21",
+        "icons": [
+          "⚽"
+        ]
+      },
+      {
+        "name": "@StanTheNoob",
+        "icons": [
+          "🧱"
+        ]
+      },
+      {
+        "name": "@LA MIZSHY",
+        "icons": [
+          "🧱"
+        ]
+      },
+      {
+        "name": "@aron.UTD",
+        "icons": [
+          "🧤"
+        ]
+      }
+    ],
+    "other_ga": "N/A"
+  }
+]
