@@ -11,7 +11,7 @@
   },
   {
     "name": "Alex",
-    "avatar": "https://cdn.discordapp.com/avatars/695188781489324114/9b98ed12c0b3feee6e5bc1e9fecddff1.png?size=128",
+    "avatar": "https://cdn.discordapp.com/avatars/695188781489324114/7770a99b7664be418b713c296e210db8.png?size=128",
     "points": 0,
     "rank": "Bronze",
     "goals": 0,
@@ -30,7 +30,7 @@
     "gk_cs": 1
   },
   {
-    "name": "blicked.",
+    "name": "Blicked.",
     "avatar": "https://cdn.discordapp.com/avatars/1465932402466750588/ccf4deef496eff210eeae9964adc2af8.png?size=128",
     "points": 0,
     "rank": "Bronze",
@@ -41,7 +41,7 @@
   },
   {
     "name": "Bosh.",
-    "avatar": "https://cdn.discordapp.com/avatars/1451248794334138411/c900136f91ff368c60060c7f9c7600a9.png?size=128",
+    "avatar": "https://cdn.discordapp.com/avatars/1451248794334138411/f647a017af5d5c718993534673a6e915.png?size=128",
     "points": 0,
     "rank": "Bronze",
     "goals": 0,
@@ -52,6 +52,16 @@
   {
     "name": "Dalglish",
     "avatar": "https://cdn.discordapp.com/avatars/1490685423226454138/d73ce9731257a70de775d7373af1d7dc.png?size=128",
+    "points": 0,
+    "rank": "Bronze",
+    "goals": 0,
+    "assists": 0,
+    "def_cs": 0,
+    "gk_cs": 0
+  },
+  {
+    "name": "Ed",
+    "avatar": "https://cdn.discordapp.com/avatars/1476270556738228295/08ef75b51c5da6aa6d55e7a1ae8ab5d1.png?size=128",
     "points": 0,
     "rank": "Bronze",
     "goals": 0,
@@ -81,7 +91,7 @@
   },
   {
     "name": "Kaleb.",
-    "avatar": "https://cdn.discordapp.com/avatars/1549752092250349578/1dd6e6c7cab6adab7adba97defb16908.png?size=128",
+    "avatar": "https://cdn.discordapp.com/avatars/1549752092250349578/8b0760c72001212c4f8c039f9fa9cfe1.png?size=128",
     "points": 0,
     "rank": "Bronze",
     "goals": 0,
