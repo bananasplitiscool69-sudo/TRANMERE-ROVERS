@@ -7,15 +7,45 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=4">
+  <style>
+    .match{margin-bottom:16px}
+    .match .date{opacity:.6;font-size:.8rem;margin:0 0 6px}
+    .match .score{font-size:1.4rem;font-weight:700;margin:0 0 10px}
+    .match ul{list-style:none;padding:0;margin:0 0 10px}
+    .match li{padding:2px 0}
+    .match .ga{opacity:.8;font-size:.9rem;white-space:pre-line;margin:0}
+    .legend{opacity:.7;font-size:.85rem;text-align:center;margin:12px 0}
+  </style>
 </head>
 <body>
   <h1>RESULTS</h1>
   <a class="back" href="index.html">← BACK</a>
-
-  <section class="card">
-    <p>Results coming soon.</p>
-  </section>
-
+  <p class="legend">⚽ Goal &nbsp; 🅰️ Assist &nbsp; 🧱 DEF clean sheet &nbsp; 🧤 GK clean sheet</p>
+  <div id="results"><section class="card"><p>Loading results…</p></section></div>
   <script src="script.js"></script>
+  <script>
+    const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+    const icon = i => (i === '🅰' ? '🅰️' : i);
+
+    async function loadResults() {
+      const box = document.getElementById('results');
+      try {
+        const res = await fetch('results.json?t=' + Date.now(), { cache: 'no-store' });
+        const data = await res.json();
+        if (!data.length) { box.innerHTML = '<section class="card"><p>No results yet.</p></section>'; return; }
+        box.innerHTML = data.map(r => `
+          <section class="card match">
+            <p class="date">${new Date(r.date).toLocaleDateString('en-GB', {day:'numeric', month:'short', year:'numeric'})}</p>
+            <p class="score">${esc(r.home)} ${r.home_score} - ${r.away_score} ${esc(r.away)}</p>
+            <ul>${r.players.map(p => `<li>${esc(p.name)} ${p.icons.map(icon).join(' ')}</li>`).join('')}</ul>
+            <p class="ga"><strong>${esc(r.away)} G/A</strong>\n${esc(r.other_ga)}</p>
+          </section>`).join('');
+      } catch (e) {
+        box.innerHTML = '<section class="card"><p>Couldn’t load results.</p></section>';
+      }
+    }
+    loadResults();
+    setInterval(loadResults, 60000);
+  </script>
 </body>
 </html>
