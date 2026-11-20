@@ -62,11 +62,13 @@
       }
       overlay.hidden = false;
       overlay.scrollTop = 0;
+      document.documentElement.style.overflow = "hidden";
       document.body.style.overflow = "hidden";
     }
 
     function closeProfile() {
       overlay.hidden = true;
+      document.documentElement.style.overflow = "";
       document.body.style.overflow = "";
     }
 
