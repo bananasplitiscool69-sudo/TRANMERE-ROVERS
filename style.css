@@ -246,30 +246,23 @@ nav {
 .lb-row.silver img { border-color: var(--silver); }
 .lb-row.bronze img { border-color: var(--bronze); }
 
-/* ---------- full screen stats page ---------- */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 5rem 1.5rem 3rem;
-  background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
-  overflow-y: auto;
-  z-index: 1000;
+/* ---------- full screen stats page (replaces the list, no popup) ---------- */
+[hidden] {
+  display: none !important;
 }
 
-.overlay[hidden] {
-  display: none;
+.profile-view {
+  position: relative;
+  max-width: 560px;
+  margin: 0 auto;
+  padding-top: 3.5rem;
+  text-align: center;
 }
 
 .close {
-  position: fixed;
-  top: 1rem;
-  right: 1.25rem;
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 52px;
   height: 52px;
   background: var(--card);
@@ -280,20 +273,12 @@ nav {
   font-size: 2rem;
   line-height: 1;
   cursor: pointer;
-  z-index: 1001;
   transition: background 0.15s, transform 0.15s;
 }
 
 .close:hover {
   background: var(--card-hover);
   transform: scale(1.08);
-}
-
-.modal {
-  width: 100%;
-  max-width: 560px;
-  margin: auto;
-  text-align: center;
 }
 
 .m-img {
