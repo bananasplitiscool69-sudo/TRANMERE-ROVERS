@@ -5,115 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Profiles | Tranmere Rovers</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=3">
-
-  <style>
-    .members { max-width: 700px; margin: 0 auto; text-align: left; }
-
-    .member {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      padding: 1rem 1.5rem;
-      border-radius: 28px;
-      cursor: pointer;
-    }
-    .member:hover { background: rgba(0, 0, 0, 0.15); }
-
-    .member img {
-      width: 110px;
-      height: 110px;
-      flex-shrink: 0;
-      border-radius: 50%;
-      object-fit: cover;
-      background: #999999;
-    }
-
-    .member .name {
-      font-size: 1.8rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      overflow-wrap: anywhere;
-    }
-
-    /* ---------- full screen stats page ---------- */
-    #overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 4rem 1.5rem 2rem;
-      background: #00558c;
-      overflow-y: auto;
-      z-index: 1000;
-    }
-    #overlay[hidden] { display: none; }
-
-    #close {
-      position: fixed;
-      top: 0.75rem;
-      right: 1.25rem;
-      padding: 0 0.5rem;
-      background: none;
-      border: none;
-      color: #111111;
-      font-family: inherit;
-      font-size: 3rem;
-      font-weight: 700;
-      line-height: 1;
-      cursor: pointer;
-      z-index: 1001;
-    }
-    #close:hover { opacity: 0.6; }
-
-    .modal { width: 100%; max-width: 520px; margin: auto; text-align: center; }
-
-    .m-img {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      background: #999999;
-    }
-
-    .m-name {
-      margin: 1rem 0 2rem;
-      font-size: clamp(1.8rem, 6vw, 2.6rem);
-      text-transform: uppercase;
-      overflow-wrap: anywhere;
-    }
-
-    .m-stats { text-align: left; }
-
-    .stat {
-      display: flex;
-      justify-content: space-between;
-      gap: 1.5rem;
-      padding: 0.9rem 0.25rem;
-      border-top: 1px solid rgba(0, 0, 0, 0.35);
-      font-size: 1.3rem;
-      font-weight: 600;
-    }
-    .stat .value { font-weight: 700; }
-    .stat.total { font-size: 1.5rem; }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
   <h1>PROFILES</h1>
   <a class="back" href="index.html">← BACK</a>
 
-  <div id="members" class="members">Loading…</div>
+  <input id="search" class="search" type="search" placeholder="Search players…" autocomplete="off">
 
-  <div id="overlay" hidden>
-    <button id="close" aria-label="Close">×</button>
+  <div id="members" class="members"><p class="message">Loading…</p></div>
+
+  <div id="overlay" class="overlay" hidden>
+    <button id="close" class="close" aria-label="Close">×</button>
     <div class="modal" role="dialog" aria-modal="true">
       <img id="m-img" class="m-img" alt="">
       <h2 id="m-name" class="m-name"></h2>
+      <p id="m-rank" class="m-rank"></p>
       <div id="m-stats" class="m-stats"></div>
     </div>
   </div>
@@ -128,13 +36,16 @@
     ];
 
     const overlay = document.getElementById("overlay");
+    const box = document.getElementById("members");
+    let everyone = [];
 
     function openProfile(p) {
       document.getElementById("m-img").src = p.avatar;
       document.getElementById("m-name").textContent = p.name;
+      document.getElementById("m-rank").textContent = p.rank ? p.rank + " rank" : "";
 
-      const box = document.getElementById("m-stats");
-      box.textContent = "";
+      const stats = document.getElementById("m-stats");
+      stats.textContent = "";
       for (const [icon, label, key] of STAT_ROWS) {
         const row = document.createElement("div");
         row.className = "stat" + (key === "points" ? " total" : "");
@@ -147,9 +58,10 @@
         v.textContent = p[key] ?? 0;
 
         row.append(l, v);
-        box.append(row);
+        stats.append(row);
       }
       overlay.hidden = false;
+      overlay.scrollTop = 0;
       document.body.style.overflow = "hidden";
     }
 
@@ -158,41 +70,53 @@
       document.body.style.overflow = "";
     }
 
+    function render(list) {
+      box.textContent = "";
+      if (!list.length) {
+        const msg = document.createElement("p");
+        msg.className = "message";
+        msg.textContent = "No players found.";
+        box.append(msg);
+        return;
+      }
+      for (const p of list) {
+        const row = document.createElement("div");
+        row.className = "member";
+        row.tabIndex = 0;
+        row.onclick = () => openProfile(p);
+        row.onkeydown = (e) => { if (e.key === "Enter") openProfile(p); };
+
+        const img = document.createElement("img");
+        img.src = p.avatar;
+        img.alt = "";
+        img.loading = "lazy";
+
+        const name = document.createElement("span");
+        name.className = "name";
+        name.textContent = p.name;
+
+        row.append(img, name);
+        box.append(row);
+      }
+    }
+
     document.getElementById("close").onclick = closeProfile;
     document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeProfile(); });
 
+    document.getElementById("search").addEventListener("input", (e) => {
+      const q = e.target.value.trim().toLowerCase();
+      render(everyone.filter(p => p.name.toLowerCase().includes(q)));
+    });
+
     fetch("members.json?t=" + Date.now())
       .then(r => r.json())
-      .then(list => {
-        const box = document.getElementById("members");
-        box.textContent = "";
-        if (!list.length) {
-          box.textContent = "No members yet.";
-          return;
-        }
-        for (const p of list) {
-          const row = document.createElement("div");
-          row.className = "member";
-          row.tabIndex = 0;
-          row.onclick = () => openProfile(p);
-          row.onkeydown = (e) => { if (e.key === "Enter") openProfile(p); };
-
-          const img = document.createElement("img");
-          img.src = p.avatar;
-          img.alt = "";
-          img.loading = "lazy";
-
-          const name = document.createElement("span");
-          name.className = "name";
-          name.textContent = p.name;
-
-          row.append(img, name);
-          box.append(row);
-        }
-      })
+      .then(list => { everyone = list; render(list); })
       .catch(() => {
-        document.getElementById("members").textContent =
-          "Couldn’t load members yet. Try again in a few minutes.";
+        box.textContent = "";
+        const msg = document.createElement("p");
+        msg.className = "message";
+        msg.textContent = "Couldn’t load members yet. Try again in a few minutes.";
+        box.append(msg);
       });
   </script>
 </body>
