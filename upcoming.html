@@ -13,9 +13,57 @@
   <a class="back" href="index.html">← BACK</a>
 
   <section class="card">
-    <p>Fixtures coming soon.</p>
+    <div id="fixtures" class="fixtures"><p>Loading fixtures…</p></div>
   </section>
 
   <script src="script.js"></script>
+  <script>
+    (async () => {
+      const box = document.getElementById("fixtures");
+      const empty = '<p>Fixtures coming soon.</p>';
+
+      try {
+        const res = await fetch("fixtures.json", { cache: "no-store" });
+        if (!res.ok) throw new Error(res.status);
+        const list = await res.json();
+
+        // hide games that finished more than 3 hours ago
+        const cutoff = Date.now() - 3 * 60 * 60 * 1000;
+        const upcoming = list.filter(f => new Date(f.when).getTime() > cutoff);
+
+        if (!upcoming.length) {
+          box.innerHTML = empty;
+          return;
+        }
+
+        box.textContent = "";
+        for (const f of upcoming) {
+          const d = new Date(f.when);
+          const row = document.createElement("div");
+          row.className = "fixture";
+
+          const date = document.createElement("div");
+          date.className = "fx-date";
+          date.textContent =
+            d.toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short" }) +
+            " · " +
+            d.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" });
+
+          const teams = document.createElement("div");
+          teams.className = "fx-teams";
+          teams.textContent = "VS " + f.opponent;
+
+          const meta = document.createElement("div");
+          meta.className = "fx-comp";
+          meta.textContent = f.league + " · " + f.size;
+
+          row.append(date, teams, meta);
+          box.append(row);
+        }
+      } catch (e) {
+        box.innerHTML = empty;
+      }
+    })();
+  </script>
 </body>
 </html>
