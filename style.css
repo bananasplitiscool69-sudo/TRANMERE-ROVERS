@@ -113,6 +113,46 @@ nav {
   font-weight: 600;
 }
 
+/* ---------- upcoming fixtures ---------- */
+.fixtures {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.fixtures p {
+  margin: 0;
+}
+
+.fixture {
+  padding: 1rem 1.2rem;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  text-align: left;
+}
+
+.fx-date {
+  color: var(--gold);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.fx-teams {
+  margin-top: 0.3rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+
+.fx-comp {
+  margin-top: 0.2rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 /* ---------- search box ---------- */
 .search {
   display: block;
@@ -343,6 +383,7 @@ nav {
 .stat.total .value {
   font-size: 1.6rem;
 }
+
 /* ---------- profile overlay (full screen) ---------- */
 .overlay {
   position: fixed;
@@ -351,6 +392,7 @@ nav {
   padding: 2.5rem 1.25rem 4rem;
   overflow-y: auto;
   background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+  color: var(--text);
   text-align: center;
 }
 
