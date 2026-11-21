@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "name": "21",
+    "avatar": "https://cdn.discordapp.com/avatars/1134890754607693934/3183a236edaf8de0b6e4d415a987f270.png?size=128",
+    "points": 5,
+    "rank": "Bronze",
+    "goals": 1,
+    "assists": 0,
+    "def_cs": 0,
+    "gk_cs": 0
+  },
+  {
+    "name": "StanTheNoob",
+    "avatar": "https://cdn.discordapp.com/avatars/837611667235667979/27926e2bc959f3e598c1e302512b204c.png?size=128",
+    "points": 4,
+    "rank": "Bronze",
+    "goals": 0,
+    "assists": 0,
+    "def_cs": 1,
+    "gk_cs": 0
+  },
+  {
+    "name": "LA MIZSHY",
+    "avatar": "https://cdn.discordapp.com/avatars/1526299799622647920/f30f717b89c7cbc2e5836acce42f87c2.png?size=128",
+    "points": 4,
+    "rank": "Bronze",
+    "goals": 0,
+    "assists": 0,
+    "def_cs": 1,
+    "gk_cs": 0
+  }
+]
