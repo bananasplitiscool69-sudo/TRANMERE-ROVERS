@@ -10,28 +10,8 @@
     "gk_cs": 0
   },
   {
-    "name": "aron.UTD",
-    "avatar": "https://cdn.discordapp.com/avatars/1290727686024466616/29c25f80868bb72f2a11ce0a945e5153.png?size=128",
-    "points": 4,
-    "rank": "Bronze",
-    "goals": 0,
-    "assists": 0,
-    "def_cs": 0,
-    "gk_cs": 1
-  },
-  {
     "name": "Blicked.",
     "avatar": "https://cdn.discordapp.com/avatars/1465932402466750588/ccf4deef496eff210eeae9964adc2af8.png?size=128",
-    "points": 0,
-    "rank": "Bronze",
-    "goals": 0,
-    "assists": 0,
-    "def_cs": 0,
-    "gk_cs": 0
-  },
-  {
-    "name": "Bosh.",
-    "avatar": "https://cdn.discordapp.com/avatars/1451248794334138411/f647a017af5d5c718993534673a6e915.png?size=128",
     "points": 0,
     "rank": "Bronze",
     "goals": 0,
@@ -81,7 +61,17 @@
   },
   {
     "name": "Kaleb.",
-    "avatar": "https://cdn.discordapp.com/avatars/1549752092250349578/8b0760c72001212c4f8c039f9fa9cfe1.png?size=128",
+    "avatar": "https://cdn.discordapp.com/avatars/1549752092250349578/a_6e46e32cc7b72eb388c0286271c570a4.gif?size=128",
+    "points": 0,
+    "rank": "Bronze",
+    "goals": 0,
+    "assists": 0,
+    "def_cs": 0,
+    "gk_cs": 0
+  },
+  {
+    "name": "Kaze.",
+    "avatar": "https://cdn.discordapp.com/avatars/1502683417903501417/845a60abe61275f131035f2b7fbcc315.png?size=128",
     "points": 0,
     "rank": "Bronze",
     "goals": 0,
@@ -102,16 +92,6 @@
   {
     "name": "lux_",
     "avatar": "https://cdn.discordapp.com/avatars/1552944623549157440/1ec0a20f6434fe2c74df64d39d0a0857.png?size=128",
-    "points": 0,
-    "rank": "Bronze",
-    "goals": 0,
-    "assists": 0,
-    "def_cs": 0,
-    "gk_cs": 0
-  },
-  {
-    "name": "Morgzz",
-    "avatar": "https://cdn.discordapp.com/avatars/1502683417903501417/c529a0f94cad2e9ee2ca6c45d0bb64bd.png?size=128",
     "points": 0,
     "rank": "Bronze",
     "goals": 0,
@@ -182,16 +162,6 @@
   {
     "name": "will",
     "avatar": "https://cdn.discordapp.com/avatars/1395511136157175928/1c1a08991cb0938eed90302927454b3b.png?size=128",
-    "points": 0,
-    "rank": "Bronze",
-    "goals": 0,
-    "assists": 0,
-    "def_cs": 0,
-    "gk_cs": 0
-  },
-  {
-    "name": "YS.",
-    "avatar": "https://cdn.discordapp.com/avatars/1522680105434878110/03cbf593db20e61c6452f83fa09a11a0.png?size=128",
     "points": 0,
     "rank": "Bronze",
     "goals": 0,
