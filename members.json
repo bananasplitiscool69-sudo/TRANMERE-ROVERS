@@ -50,6 +50,16 @@
     "gk_cs": 0
   },
   {
+    "name": "Garcia",
+    "avatar": "https://cdn.discordapp.com/avatars/982212691601006612/fb7255b0279aea97745ea1bcb2a5c6cf.png?size=128",
+    "points": 0,
+    "rank": "Bronze",
+    "goals": 0,
+    "assists": 0,
+    "def_cs": 0,
+    "gk_cs": 0
+  },
+  {
     "name": "GVBBY.",
     "avatar": "https://cdn.discordapp.com/avatars/1145444842952982528/b267a25edb87060a1d2d8bd1f4cce901.png?size=128",
     "points": 0,
@@ -97,6 +107,16 @@
     "goals": 0,
     "assists": 0,
     "def_cs": 1,
+    "gk_cs": 0
+  },
+  {
+    "name": "LEMONDE.",
+    "avatar": "https://cdn.discordapp.com/avatars/853290754021523497/c628813e11d83143010e75edbbb7da49.png?size=128",
+    "points": 0,
+    "rank": "Bronze",
+    "goals": 0,
+    "assists": 0,
+    "def_cs": 0,
     "gk_cs": 0
   },
   {
