@@ -28,15 +28,5 @@
     "assists": 0,
     "def_cs": 1,
     "gk_cs": 0
-  },
-  {
-    "name": "aron.UTD",
-    "avatar": "https://cdn.discordapp.com/avatars/1290727686024466616/29c25f80868bb72f2a11ce0a945e5153.png?size=128",
-    "points": 4,
-    "rank": "Bronze",
-    "goals": 0,
-    "assists": 0,
-    "def_cs": 0,
-    "gk_cs": 1
   }
 ]
